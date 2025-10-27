@@ -1,0 +1,109 @@
+
+body {
+    background-color: #e0e0c1; 
+    font-family: arial, sans-serif; 
+}
+
+
+.movie-card {
+    margin-bottom: 20px; 
+    transition: transform 0.2s; 
+}
+
+.movie-card:hover {
+    transform: scale(1.05); 
+}
+
+
+.img-fluid {
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.btn-secondary {
+    margin-bottom: 20px; 
+}
+
+
+@media (max-width: 575.98px) { 
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .movie-card {
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) { 
+    .movie-card {
+        margin-bottom: 25px;
+    }
+}
+
+
+.modal-avatar .modal-content {
+    background: linear-gradient(to bottom, #4dc1e7 0%, #6af1c9 100%); 
+    color: #004d66; 
+    border: 2px solid #66ccff; 
+}
+
+.modal-avatar .modal-header {
+    background-color: #48e3ee; 
+    color: #ffffff; 
+}
+
+.modal-avatar .modal-body h6 {
+    color: #000000; 
+}
+
+.modal-avatar .btn-secondary {
+    background-color: #59f1c4; 
+    border-color: #66ccff;
+}
+
+
+.modal-elresplandor .modal-content {
+    background: linear-gradient(to bottom, #f5f5dc 0%, #8b4513 100%); 
+    color: #ffffff; 
+    border: 2px solid #dc143c; 
+}
+
+.modal-elresplandor .modal-header {
+    background-color: #a0522d; 
+    color: #ffffff;
+}
+
+.modal-elresplandor .modal-body h6 {
+    color: #dc143c; 
+}
+
+.modal-elresplandor .btn-secondary {
+    background-color: #8b4513; 
+    border-color: #8b4513;
+}
+
+
+.modal-todoentodaspartes .modal-content {
+    background: linear-gradient(45deg, #ffe4e1 0%, #e0f7ff 25%, #ffffe0 50%, #ffe4e1 75%, #e0f7ff 100%); 
+    color: #333333; 
+    border: 2px solid #ffb6c1; 
+}
+
+.modal-todoentodaspartes .modal-header {
+    background-color: #add8e6; 
+    color: #ffffff;
+}
+
+.modal-todoentodaspartes .modal-body h6 {
+    color: #ffa500; 
+}
+
+.modal-todoentodaspartes .btn-secondary {
+    background-color: #ffb6c1; 
+    border-color: #ffb6c1;
+}

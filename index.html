@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reseñas de Películas</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+
+<body>
+    <div class="container">
+        <header class="my-4">
+            <h1 class="text-center">Reseñas de Películas</h1>
+            <p class="text-center">DESARROLLO DE SOFTWARE WEB FRONT-END</p>
+        </header>
+
+        
+        <div class="row mb-4">
+            <div class="col-12 col-sm-6 col-md-4">
+                <input type="text" id="search" class="form-control" placeholder="Buscar por título." />
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <select id="filter" class="form-select">
+                    <option value="">Todos los géneros</option>
+                    <option value="ciencia-ficción">Ciencia Ficción</option>
+                    <option value="terror">Terror</option>
+                    <option value="comedia">Comedia</option>
+                </select>
+            </div>
+        </div>
+
+        
+        <div class="row" id="movie-list">
+            <div class="col-12 col-sm-6 col-md-4 movie-card" data-genre="comedia">
+                <div class="card">
+                    <img src=imagenes/todoentodaspartes.jpg class="card-img-top" alt="Todo en Todas Partes al Mismo Tiempo" />
+                    <div class="card-body">
+                        <h5 class="card-title">Todo en Todas Partes al Mismo Tiempo</h5>
+                        <p class="card-text">Fecha de estreno: 2022</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-todoentodaspartes">Ver Detalle</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 movie-card" data-genre="ciencia-ficción">
+                <div class="card">
+                    <img src=imagenes/avatar.jpg class="card-img-top" alt="Avatar" />
+                    <div class="card-body">
+                        <h5 class="card-title">Avatar</h5>
+                        <p class="card-text">Fecha de estreno: 2009</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-avatar">Ver Detalle</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 movie-card" data-genre="terror">
+                <div class="card">
+                    <img src=imagenes/elresplandor.jpg class="card-img-top" alt="El Resplandor" />
+                    <div class="card-body">
+                        <h5 class="card-title">El Resplandor</h5>
+                        <p class="card-text">Fecha de estreno: 1980</p>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-elresplandor">Ver Detalle</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="modal fade modal-todoentodaspartes" id="modal-todoentodaspartes" tabindex="-1" aria-labelledby="modal-todoentodaspartes-label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-todoentodaspartes-label">Todo en Todas Partes al Mismo Tiempo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <img src=imagenes/todoentodaspartes2.png class="img-fluid" alt="Todo en Todas Partes al Mismo Tiempo" />
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <p><strong>Fecha de estreno:</strong> 2022</p>
+                                <p><strong>Género:</strong> Comedia</p>
+                                <p><strong>Actores principales:</strong> Michelle Yeoh, Ke Huy Quan, Jamie Lee Curtis</p>
+                                <h6>Sinopsis</h6>
+                                                <p>Cuando una ruptura interdimensional altera la realidad, Evelyn (Michelle Yeoh), una inmigrante china en Estados Unidos, se ve envuelta en una aventura salvaje en la que solo ella puede salvar el mundo. Perdida en los mundos infinitos del multiverso, esta heroína inesperada debe canalizar sus nuevos poderes para luchar contra los extraños y desconcertantes peligros del multiverso mientras el destino del mundo pende de un hilo</p>
+                                <h6>Reseña</h6>
+                                <p>Todo a la vez en todas partes es una película, pero también es un síntoma de nuestro tiempo. O, mejor, son muchas películas y todas duelen. Es una superproducción, pero la mueve una idea más propia del cine indie. Es comedia, película de animación, de artes marciales, de superhéroes, una tragedia, un manifiesto de autoayuda, una genialidad y un disparate. Todo y nada. Y además explota..</p>
+                                <p><strong>Duración:</strong> 139 minutos</p>
+                                <p><strong>Director:</strong> Daniel Kwan y Daniel Scheinert</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="modal fade modal-avatar" id="modal-avatar" tabindex="-1" aria-labelledby="modal-avatar-label" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-avatar-label">Avatar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <img src=imagenes/avatar2.jpg class="img-fluid" alt="Avatar" />
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <p><strong>Fecha de estreno:</strong> 2009</p>
+                                <p><strong>Género:</strong> Ciencia Ficción</p>
+                                <p><strong>Actores principales:</strong> Sam Worthington, Zoe Saldana, Sigourney Weaver</p>
+                                <h6>Sinopsis</h6>
+                                <p>Año 2154. Jake Sully (Sam Worthington), un ex-marine condenado a vivir en una silla de ruedas, sigue siendo, a pesar de ello, un auténtico guerrero. Precisamente por ello ha sido designado para ir a Pandora, donde algunas empresas están extrayendo un mineral extraño que podría resolver la crisis energética de la Tierra. Para contrarrestar la toxicidad de la atmósfera de Pandora, se ha creado el programa Avatar, gracias al cual los seres humanos mantienen sus conciencias unidas a un avatar: un cuerpo biológico controlado de forma remota que puede sobrevivir en el aire letal. Esos cuerpos han sido creados con ADN humano, mezclado con ADN de los nativos de Pandora, los Na'vi. Convertido en avatar, Jake puede caminar otra vez. Su misión consiste en infiltrarse entre los Na'vi, que se han convertido en el mayor obstáculo para la extracción del mineral. Pero cuando Neytiri, una bella Na'vi (Zoe Saldana), salva la vida de Jake, todo cambia: Jake, tras superar ciertas pruebas, es admitido en su clan. Mientras tanto, los hombres esperan los resultados de la misión de Jake</p>
+                                <h6>Reseña</h6>
+                                <p>Avatar es una maravillosa experiencia visual con asombrosos efectos digitales que te transportan a un bello y colorido mundo mágico. Una historia de aventura, amor y acción en un mundo alienígena que, aparte de ser un relato de ciencia ficción, narra algo que no se aleja del conflicto histórico entre pueblos nativos y colonizadores. Posee un buen elenco, espectacular producción y una bella banda sonora compuesta por James Horner, esta es sin duda una de las mejores obras de James Cameron tras haber traído joyas como Terminator o Titanic.</p>
+                                <p><strong>Duración:</strong> 162 minutos</p>
+                                <p><strong>Director:</strong> James Cameron</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="modal fade modal-elresplandor" id="modal-elresplandor" tabindex="-1" aria-labelledby="modal-elresplandor-label" aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-elresplandor-label">El Resplandor</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <img src=imagenes/elresplandor2.jpg class="img-fluid" alt="El Resplandor" />
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <p><strong>Fecha de estreno:</strong> 1980</p>
+                                <p><strong>Género:</strong> Terror</p>
+                                <p><strong>Actores principales:</strong> Jack Nicholson, Shelley Duvall, Danny Lloyd</p>
+                                <h6>Sinopsis</h6>
+                                <p>Jack Torrance se traslada con su mujer y su hijo de siete años al impresionante hotel Overlook, en Colorado, para encargarse del mantenimiento de las instalaciones durante la temporada invernal, época en la que permanece cerrado y aislado por la nieve. Su objetivo es encontrar paz y sosiego para escribir una novela. Sin embargo, poco después de su llegada al hotel, al mismo tiempo que Jack empieza a padecer inquietantes trastornos de personalidad, se suceden extraños y espeluznantes fenómenos paranormales</p>
+                                <h6>Reseña</h6>
+                                <p>Kubrick se propuso rodar los vericuetos de una esquizofrenia maníaca, asomarse a los abismos interiores de una mente perturbada, y a fe que lo logró. El relato de Stephen King fue trasladado a la pantalla con una narración inquietante, por momentos angustiosa. El poder de la imagen del maestro neoyorquino consiguió, además de una atmósfera opresiva, algunas de las escenas más impactantes del cine de terror de las últimas décadas. El mérito es aún mayor cuando, a diferencia de lo habitual en el género, el director no se refugia en la oscuridad para provocar miedo o tensión. Como muestra: pocas veces en la historia del cine una simple escena como un niño montado en un triciclo, paseando por los pasillos de un hotel, provocó un suspense tan extraño, tan inquietante, tan sobrecogedor. Aviso: la versión doblada al español es otro tipo de terror.</p>
+                                <p><strong>Duración:</strong> 146 minutos</p>
+                                <p><strong>Director:</strong> Stanley Kubrick</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        document.getElementById('search').addEventListener('input', filterMovies);
+        document.getElementById('filter').addEventListener('change', filterMovies);
+
+        function filterMovies() {
+            const searchTerm = document.getElementById('search').value.toLowerCase();
+            const filterGenre = document.getElementById('filter').value;
+            const movies = document.querySelectorAll('.movie-card');
+
+            movies.forEach(movie => {
+                const title = movie.querySelector('.card-title').textContent.toLowerCase();
+                const genre = movie.getAttribute('data-genre');
+                const matchesSearch = title.includes(searchTerm);
+                const matchesFilter = !filterGenre || genre === filterGenre;
+                movie.style.display = matchesSearch && matchesFilter ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+<head>
+  <style>
+    footer {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <footer>
+    <p>Daniel Augusto Flórez Santacruz</p>
+  </footer>
+</body>
+</html>
