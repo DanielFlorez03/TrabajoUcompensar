@@ -1,0 +1,121 @@
+
+$body-bg: #e0e0c1;
+$body-font: arial, sans-serif;
+
+$movie-card-transition: transform 0.2s;
+
+$img-border-radius: 8px;
+$img-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+$btn-margin-bottom: 20px;
+
+
+$modals: (
+  avatar: (
+    content-bg: linear-gradient(to bottom, #4dc1e7 0%, #6af1c9 100%),
+    content-color: #004d66,
+    content-border: #66ccff,
+    header-bg: #48e3ee,
+    header-color: #ffffff,
+    body-h6: #000000,
+    btn-bg: #59f1c4,
+    btn-border: #66ccff
+  ),
+  elresplandor: (
+    content-bg: linear-gradient(to bottom, #f5f5dc 0%, #8b4513 100%),
+    content-color: #ffffff,
+    content-border: #dc143c,
+    header-bg: #a0522d,
+    header-color: #ffffff,
+    body-h6: #dc143c,
+    btn-bg: #8b4513,
+    btn-border: #8b4513
+  ),
+  todoentodaspartes: (
+    content-bg: linear-gradient(
+      45deg,
+      #ffe4e1 0%,
+      #e0f7ff 25%,
+      #ffffe0 50%,
+      #ffe4e1 75%,
+      #e0f7ff 100%
+    ),
+    content-color: #333333,
+    content-border: #ffb6c1,
+    header-bg: #add8e6,
+    header-color: #ffffff,
+    body-h6: #ffa500,
+    btn-bg: #ffb6c1,
+    btn-border: #ffb6c1
+  )
+);
+
+
+@mixin hover-scale($scale) {
+  transition: $movie-card-transition;
+  &:hover {
+    transform: scale($scale);
+  }
+}
+
+
+body {
+  background-color: $body-bg;
+  font-family: $body-font;
+}
+
+.movie-card {
+  margin-bottom: 20px;
+  @include hover-scale(1.05);
+}
+
+.img-fluid {
+  border-radius: $img-border-radius;
+  box-shadow: $img-box-shadow;
+}
+
+.btn-secondary {
+  margin-bottom: $btn-margin-bottom;
+}
+
+
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .movie-card {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .movie-card {
+    margin-bottom: 25px;
+  }
+}
+
+
+@each $name, $props in $modals {
+  .modal-#{$name} {
+    .modal-content {
+      background: map-get($props, content-bg);
+      color: map-get($props, content-color);
+      border: 2px solid map-get($props, content-border);
+    }
+    .modal-header {
+      background-color: map-get($props, header-bg);
+      color: map-get($props, header-color);
+    }
+    .modal-body h6 {
+      color: map-get($props, body-h6);
+    }
+    .btn-secondary {
+      background-color: map-get($props, btn-bg);
+      border-color: map-get($props, btn-border);
+    }
+  }
+}
